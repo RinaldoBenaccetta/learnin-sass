@@ -1,0 +1,83 @@
+// hidden comment
+
+/* visible comment*/
+
+
+html {
+    font-size: 3 * .5rem;
+}
+
+div {
+    .color {
+        &-first {
+            background-color: red;
+        }
+
+        &-second {
+            background-color: green;
+        &:hover {
+            background-color: blue;
+        }
+        }
+        &-third {
+          @extend .color-first;
+          color : green ;
+        }
+    }
+}
+
+.one {
+    &.two {
+        background-color: orange;
+    }
+}
+
+.foo {
+    .cssgradients & {
+      background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+      background: -moz-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+      background: linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+    }
+    & .cssgradients  {
+        background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+        background: -moz-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+        background: linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+      }
+    .no-cssgradients & {
+      background: #c9de96;
+    }
+  }
+
+  $border-color : red;
+
+  .one {
+    border: 2px solid $border-color;
+  }
+
+  %not-processed {
+    border: 3px dashed black;
+    color: blue;
+  }
+
+  .box-first {
+    @extend %not-processed;
+    font-size: 4rem;
+  }
+  .box-second {
+    @extend %not-processed;
+    font-size: 2rem;
+    font-style: italic;
+  }
+
+  @mixin colored-bold-text($color) {
+    font-weight: bold;
+    color: $color;
+  }
+
+  .text {
+    &-bold {
+            &-yellow {
+                @include colored-bold-text(yellow);
+            }
+        }
+    }

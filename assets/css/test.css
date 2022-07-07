@@ -1,0 +1,58 @@
+/* visible comment*/
+html {
+  font-size: 1.5rem;
+}
+
+div .color-first, div .color-third {
+  background-color: red;
+}
+div .color-second {
+  background-color: green;
+}
+div .color-second:hover {
+  background-color: blue;
+}
+div .color-third {
+  color: green;
+}
+
+.one.two {
+  background-color: orange;
+}
+
+.cssgradients .foo {
+  background: -webkit-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+}
+.foo .cssgradients {
+  background: -webkit-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+}
+.no-cssgradients .foo {
+  background: #c9de96;
+}
+
+.one {
+  border: 2px solid red;
+}
+
+.box-second, .box-first {
+  border: 3px dashed black;
+  color: blue;
+}
+
+.box-first {
+  font-size: 4rem;
+}
+
+.box-second {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.text-bold-yellow {
+  font-weight: bold;
+  color: yellow;
+}/*# sourceMappingURL=test.css.map */
