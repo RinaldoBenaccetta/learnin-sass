@@ -339,17 +339,18 @@ template {
 
 body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: rgb(51, 43, 43);
+  letter-spacing: 0.15rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: rgb(146, 25, 25);
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 1.65rem;
   color: rgb(201, 101, 35);
 }
 
@@ -358,28 +359,40 @@ h2 {
 }
 
 .card-date {
-  font-size: 1.35rem;
+  font-size: 1.21rem;
   color: white;
 }
 
-/*.card-background {
-    div {
-        div {
-            font-size: $font-size*1.25;
-        }
-    }
-}*/
-div {
+.button-fake {
+  color: white;
+}
+
+div, section, article, h1, h2 {
   border: 2px solid orange;
 }
 
 .card {
   width: 25rem;
   height: 40rem;
+  margin: 2rem auto;
+  box-shadow: 0 0 0.5rem 0.05rem rgb(146, 25, 25);
 }
 .card-background {
   height: inherit;
   width: inherit;
+}
+.card-background footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 2.5rem;
+  height: 3rem;
+  background-color: red;
+  position: relative;
+  bottom: 3rem;
+}
+.card-background footer div {
+  padding: 0.5rem;
 }
 .card-image {
   height: inherit;
@@ -393,12 +406,27 @@ div {
 }
 .card-date {
   position: absolute;
-  z-index: 9;
+  z-index: 1;
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
   background-color: rgb(146, 25, 25);
-  top: 1rem;
-  right: 1rem;
+  top: 2.5rem;
+  right: 2.5rem;
   text-align: center;
+  box-sizing: border-box;
+  padding-top: 0.2rem;
+}
+.card .card-infos {
+  background-color: white;
+  height: 75%;
+  box-sizing: border-box;
+  padding: 0 2.5rem 0;
+  position: relative;
+}
+.card .card-infos .button-fake {
+  position: absolute;
+  top: -1.75rem;
+  padding: 0.5rem;
+  background-color: rgb(146, 25, 25);
 }/*# sourceMappingURL=style.css.map */
