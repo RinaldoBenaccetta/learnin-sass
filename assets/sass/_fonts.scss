@@ -20,10 +20,15 @@ h2 {
     color: $color-text-fade;
 }
 
-.card-background {
+.card-date {
+    font-size: $font-size*.9;
+    color: $color-tertiary;
+}
+
+/*.card-background {
     div {
         div {
             font-size: $font-size*1.25;
         }
     }
-}
+}*/

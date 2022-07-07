@@ -18,6 +18,9 @@ body {
     }
     &-image {
         @include size-inherit;
+
+        position: relative;
+
            img {
                 width: 100%;
                 height: 100%;
@@ -25,19 +28,14 @@ body {
             }
     }
     &-date {
+        position: absolute;
+        z-index: 9;
         border-radius: 50%;
         width: 4rem;
         height: 4rem;
         background-color: $color-primary;
-        color: $color-text-fade;
+        top: 1rem;
+        right: 1rem;
         text-align: center;
-        div {
-            border-color: pink;
-            //font-size: $font-size*.75;
-        }
-        .test {
-            //font-size: $font-size*.75;
-        }
-        
     }
 }

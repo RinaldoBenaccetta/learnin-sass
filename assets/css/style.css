@@ -357,10 +357,18 @@ h2 {
   color: rgb(131, 103, 103);
 }
 
-.card-background div div {
-  font-size: 1.875rem;
+.card-date {
+  font-size: 1.35rem;
+  color: white;
 }
 
+/*.card-background {
+    div {
+        div {
+            font-size: $font-size*1.25;
+        }
+    }
+}*/
 div {
   border: 2px solid orange;
 }
@@ -376,6 +384,7 @@ div {
 .card-image {
   height: inherit;
   width: inherit;
+  position: relative;
 }
 .card-image img {
   width: 100%;
@@ -383,13 +392,13 @@ div {
   object-fit: cover;
 }
 .card-date {
+  position: absolute;
+  z-index: 9;
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
   background-color: rgb(146, 25, 25);
-  color: rgb(131, 103, 103);
+  top: 1rem;
+  right: 1rem;
   text-align: center;
-}
-.card-date div {
-  border-color: pink;
 }/*# sourceMappingURL=style.css.map */
