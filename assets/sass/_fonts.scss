@@ -1,0 +1,29 @@
+//@import 'variables';
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: $font-size;
+    color: $color-text;
+}
+
+h1 {
+    font-size: $font-size*2;
+    color: $color-primary;
+}
+
+h2 {
+    font-size: $font-size*1.5;
+    color: $color-secondary;
+}
+
+.infos {
+    color: $color-text-fade;
+}
+
+.card-background {
+    div {
+        div {
+            font-size: $font-size*1.25;
+        }
+    }
+}
