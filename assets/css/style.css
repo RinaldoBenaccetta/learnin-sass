@@ -378,16 +378,15 @@ h2 {
   height: 40rem;
   margin: 2rem auto;
   background-color: rgb(201, 101, 35);
-  box-shadow: 0 0 0.5rem 0.05rem rgb(146, 25, 25);
+  box-shadow: 0 0 0.5rem 0.05rem rgb(201, 101, 35);
   overflow: hidden;
 }
 .card header {
   height: inherit;
   width: inherit;
   z-index: 0;
-  box-sizing: border-box;
 }
-.card main {
+.card section {
   z-index: 1;
   position: absolute;
   bottom: 0;
@@ -396,13 +395,13 @@ h2 {
   box-sizing: border-box;
   padding: 0 2.5rem 0;
 }
-.card main .button-fake {
+.card section .button-fake {
   position: absolute;
   top: -1.75rem;
   padding: 0.5rem;
   background-color: rgb(146, 25, 25);
 }
-.card main p {
+.card section p {
   opacity: 0;
 }
 .card footer {
@@ -447,8 +446,11 @@ h2 {
   top: 2.5rem;
   right: 2.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   box-sizing: border-box;
-  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 .card-text {
   overflow: hidden;
@@ -460,10 +462,10 @@ h2 {
 .card header .card-image-main {
   transition: transform 0.5s, opacity 0.5s;
 }
-.card main {
+.card section {
   transition: height 0.5s;
 }
-.card main p {
+.card section p {
   transition: opacity 0.5s;
 }
 .card:hover {
@@ -473,9 +475,9 @@ h2 {
   transform: scale(1.5, 1.5);
   opacity: 0.5;
 }
-.card:hover main {
+.card:hover section {
   height: 55%;
 }
-.card:hover main p {
+.card:hover section p {
   opacity: 1;
 }/*# sourceMappingURL=style.css.map */
