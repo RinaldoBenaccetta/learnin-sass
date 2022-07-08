@@ -367,41 +367,74 @@ h2 {
   color: white;
 }
 
-div, section, article, h1, h2 {
-  border: 2px solid orange;
+.card footer {
+  font-size: 0.99rem;
+  color: rgb(131, 103, 103);
 }
 
 .card {
+  position: relative;
   width: 25rem;
   height: 40rem;
   margin: 2rem auto;
+  background-color: rgb(201, 101, 35);
   box-shadow: 0 0 0.5rem 0.05rem rgb(146, 25, 25);
+  overflow: hidden;
 }
-.card-background {
+.card header {
   height: inherit;
   width: inherit;
+  z-index: 0;
+  box-sizing: border-box;
 }
-.card-background footer {
+.card main {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  height: 35%;
+  box-sizing: border-box;
+  padding: 0 2.5rem 0;
+}
+.card main .button-fake {
+  position: absolute;
+  top: -1.75rem;
+  padding: 0.5rem;
+  background-color: rgb(146, 25, 25);
+}
+.card main p {
+  opacity: 0;
+}
+.card footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
+  box-sizing: border-box;
   padding: 0 2.5rem;
   height: 3rem;
-  background-color: red;
-  position: relative;
-  bottom: 3rem;
+  width: 100%;
+  background-color: white;
 }
-.card-background footer div {
-  padding: 0.5rem;
+.card footer div {
+  margin: 0.5rem 1rem 0.5rem 0;
+  display: flex;
+  align-items: center;
 }
-.card-image {
+.card footer div:nth-child(1)::before {
+  font-family: "Material Icons";
+  content: "visibility";
+}
+.card footer div:nth-child(2)::before {
+  font-family: "Material Icons";
+  content: "forum";
+}
+
+.card-image-main {
   height: inherit;
   width: inherit;
-  position: relative;
-}
-.card-image img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .card-date {
@@ -415,18 +448,34 @@ div, section, article, h1, h2 {
   right: 2.5rem;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 0.2rem;
+  padding-top: 0.4rem;
 }
-.card .card-infos {
-  background-color: white;
-  height: 75%;
-  box-sizing: border-box;
-  padding: 0 2.5rem 0;
-  position: relative;
+.card-text {
+  overflow: hidden;
 }
-.card .card-infos .button-fake {
-  position: absolute;
-  top: -1.75rem;
-  padding: 0.5rem;
-  background-color: rgb(146, 25, 25);
+
+.card {
+  transition: box-shadow 0.5s;
+}
+.card header .card-image-main {
+  transition: transform 0.5s, opacity 0.5s;
+}
+.card main {
+  transition: height 0.5s;
+}
+.card main p {
+  transition: opacity 0.5s;
+}
+.card:hover {
+  box-shadow: 0 0 1rem 0.05rem rgb(146, 25, 25);
+}
+.card:hover header .card-image-main {
+  transform: scale(1.5, 1.5);
+  opacity: 0.5;
+}
+.card:hover main {
+  height: 55%;
+}
+.card:hover main p {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

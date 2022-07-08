@@ -1,5 +1,5 @@
 
-$dev : true;
+$dev : false;
 
 // sizes
 $font-size: 1.1rem;
@@ -13,3 +13,7 @@ $color-secondary: rgb(201, 101, 35);
 $color-tertiary: white;
 $color-text: rgb(51, 43, 43);
 $color-text-fade: rgb(131, 103, 103);
+
+// interactive
+$transition-time: .5s;
+$image-resizing: 1.5;

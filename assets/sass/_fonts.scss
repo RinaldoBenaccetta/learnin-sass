@@ -29,3 +29,10 @@ h2 {
 .button-fake {
     color: $color-tertiary;
 }
+
+.card {
+    footer {
+        font-size: $font-size * .9;
+        color: $color-text-fade;
+    }
+}

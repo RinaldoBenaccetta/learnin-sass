@@ -1,0 +1,39 @@
+.card{
+    transition: box-shadow $transition-time;
+
+    header {
+        .card-image-main {
+            transition: transform $transition-time,
+                        opacity $transition-time;
+        }
+    }
+
+    main {
+        transition: height $transition-time;
+
+        p {
+            transition: opacity $transition-time;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 1rem .05rem $color-primary;
+
+        header {
+            .card-image-main {
+                transform: scale($image-resizing,$image-resizing);
+                opacity: .5;
+            }
+        }
+
+        main {
+            // height relatively to the card
+            height: 55%;
+
+            p {
+                // show when up
+                opacity: 1;
+            }
+        }
+    }
+}
