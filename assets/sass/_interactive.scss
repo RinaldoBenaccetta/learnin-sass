@@ -1,14 +1,14 @@
 .card{
     transition: box-shadow $transition-time;
 
-    header {
+    .card-article-header {
         .card-image-main {
             transition: transform $transition-time,
                         opacity $transition-time;
         }
     }
 
-    section {
+    .card-article-main {
         transition: height $transition-time;
 
         p {
@@ -19,14 +19,14 @@
     &:hover {
         box-shadow: 0 0 1rem .05rem $color-primary;
 
-        header {
+        .card-article-header {
             .card-image-main {
                 transform: scale($image-resizing,$image-resizing);
                 opacity: .5;
             }
         }
 
-        section {
+        .card-article-main {
             // height relatively to the card
             height: 55%;
 

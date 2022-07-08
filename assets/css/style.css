@@ -367,7 +367,7 @@ h2 {
   color: white;
 }
 
-.card footer {
+.card .card-article-footer {
   font-size: 0.99rem;
   color: rgb(131, 103, 103);
 }
@@ -381,12 +381,12 @@ h2 {
   box-shadow: 0 0 0.5rem 0.05rem rgb(201, 101, 35);
   overflow: hidden;
 }
-.card header {
+.card .card-article-header {
   height: inherit;
   width: inherit;
   z-index: 0;
 }
-.card section {
+.card .card-article-main {
   z-index: 1;
   position: absolute;
   bottom: 0;
@@ -395,16 +395,16 @@ h2 {
   box-sizing: border-box;
   padding: 0 2.5rem 0;
 }
-.card section .button-fake {
+.card .card-article-main .button-fake {
   position: absolute;
   top: -1.75rem;
   padding: 0.5rem;
   background-color: rgb(146, 25, 25);
 }
-.card section p {
+.card .card-article-main p {
   opacity: 0;
 }
-.card footer {
+.card .card-article-footer {
   position: absolute;
   bottom: 0;
   z-index: 2;
@@ -417,16 +417,16 @@ h2 {
   width: 100%;
   background-color: white;
 }
-.card footer div {
+.card .card-article-footer div {
   margin: 0.5rem 1rem 0.5rem 0;
   display: flex;
   align-items: center;
 }
-.card footer div:nth-child(1)::before {
+.card .card-article-footer div:nth-child(1)::before {
   font-family: "Material Icons";
   content: "visibility";
 }
-.card footer div:nth-child(2)::before {
+.card .card-article-footer div:nth-child(2)::before {
   font-family: "Material Icons";
   content: "forum";
 }
@@ -459,25 +459,25 @@ h2 {
 .card {
   transition: box-shadow 0.5s;
 }
-.card header .card-image-main {
+.card .card-article-header .card-image-main {
   transition: transform 0.5s, opacity 0.5s;
 }
-.card section {
+.card .card-article-main {
   transition: height 0.5s;
 }
-.card section p {
+.card .card-article-main p {
   transition: opacity 0.5s;
 }
 .card:hover {
   box-shadow: 0 0 1rem 0.05rem rgb(146, 25, 25);
 }
-.card:hover header .card-image-main {
+.card:hover .card-article-header .card-image-main {
   transform: scale(1.5, 1.5);
   opacity: 0.5;
 }
-.card:hover section {
+.card:hover .card-article-main {
   height: 55%;
 }
-.card:hover section p {
+.card:hover .card-article-main p {
   opacity: 1;
 }/*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@ div, section, article, h1, h2, main, footer, header{
     // hide all that overflow this box
     overflow: hidden;
 
-    header {
+    .card-article-header {
         // need this for image fit all the card
         @include size-inherit;
 
@@ -30,7 +30,7 @@ div, section, article, h1, h2, main, footer, header{
         z-index: 0;
     }
 
-    section {
+    .card-article-main {
         // place in middle layer
         z-index: 1;
 
@@ -62,7 +62,7 @@ div, section, article, h1, h2, main, footer, header{
         }
     }
 
-    footer {
+    .card-article-footer {
         // position on bottom relative from 'card' parent
         position: absolute;
         bottom: 0;
